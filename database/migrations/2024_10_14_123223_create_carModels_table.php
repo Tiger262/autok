@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('car_models', function (Blueprint $table) {
             $table->id();
-            $table->integer('makerId');
             $table->string('name');
-            $table->foreign("makerId")->references('id')->on('makers');
+            $table->unsignedBigInteger('maker_id');
+            $table->foreign('maker_id')->references('id')->on('makers')->onDelete("cascade");
         });
     }
 

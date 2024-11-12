@@ -3,9 +3,9 @@
 @section('title', 'karosszéria (GET Bodies')
 
 <div>
-    <a class="btn" href="{{route("createFuel")}}">Új Fuel hozzáadása</a>
-    <a class="order" href="{{route("fuels", ["sort_by" => "name", "sort_dir" => "asc"])}}" title="ABC">ABC</a>
-    <a class="order" href="{{route("fuels", ["sort_by" => "name", "sort_dir" => "desc"])}}" title="ZYX">ZYX</a>
+    <a class="btn" href="{{route("createBody")}}">Új Fuel hozzáadása</a>
+    <a class="order" href="{{route("bodies", ["sort_by" => "name", "sort_dir" => "asc"])}}" title="ABC">ABC</a>
+    <a class="order" href="{{route("bodies", ["sort_by" => "name", "sort_dir" => "desc"])}}" title="ZYX">ZYX</a>
 
     <table class="editable">
         <thead>

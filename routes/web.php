@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MakerController;
 use App\Http\Controllers\FuelController;
 use App\Http\Controllers\carModelController;
+use App\Http\Controllers\BodyController;
 
 Route::get('/', function () {
     return view('home');
@@ -35,3 +36,12 @@ Route::post('fuel/{id}}', [FuelController::class, 'edit'])->name('editFuel');
 Route::patch('fuel/create', [FuelController::class, 'update'])->name('updateFuel');
 Route::delete('fuel/{id}', [FuelController::class, 'delete'])->name('deleteFuel');
 Route::post('fuels/search', [FuelController::class, 'search'])->name('searchFuel');
+
+// FUEL
+Route::get('bodies', [BodyController::class, 'index'])->name('bodies');
+Route::post('body', [BodyController::class, 'save'])->name('saveBody');
+Route::get('body/create', [BodyController::class, 'create'])->name('createBody');
+Route::post('body/{id}}', [BodyController::class, 'edit'])->name('editBody');
+Route::patch('body/create', [BodyController::class, 'update'])->name('updateBody');
+Route::delete('body/{id}', [BodyController::class, 'delete'])->name('deleteBody');
+Route::post('bodies/search', [BodyController::class, 'search'])->name('searchBodies');

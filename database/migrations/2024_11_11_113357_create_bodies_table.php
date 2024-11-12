@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_bodies', function (Blueprint $table) {
+        Schema::create('bodies', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('bodyType');
+            $table->mediumText('name');
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_bodies');
+        Schema::dropIfExists('bodies');
     }
 };

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Body;
 class BodyController extends Controller
 {
     /**
@@ -11,7 +11,7 @@ class BodyController extends Controller
      */
     public function index()
     {
-        //
+        return view('bodies/list', ['entities' => Body::all()]);
     }
 
     /**
