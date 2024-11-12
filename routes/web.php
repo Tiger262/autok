@@ -22,6 +22,7 @@ Route::post('maker/search', [FuelController::class, 'search'])->name('searchMake
 
 //CARMODEL
 Route::get('carModels', [carModelController::class, 'index'])->name('carModels');
+Route::get('carModels/{id}', [carModelController::class, 'ByMakers'])->name('getCarModelsByMaker');
 Route::post('carModel', [carModelController::class, 'save'])->name('saveCarModel');
 Route::get('carModel/create', [carModelController::class, 'create'])->name('createCarModel');
 Route::post('carModel/{id}}', [carModelController::class, 'edit'])->name('editCarModel');

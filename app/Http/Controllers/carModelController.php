@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\carModel;
+use App\Models\Maker;
 
 class carModelController extends Controller
 {
@@ -13,6 +14,13 @@ class carModelController extends Controller
     public function index()
     {
         return view('carModels/list', ['entities' => carModel::all()]);
+    }
+
+    public function ByMakers(string $makerId)
+    {
+        $maker=Maker::find($makerId);
+        $entities = $maker->models;
+        return view('carModels/list', ['entities'=>$entities]);
     }
 
     /**
