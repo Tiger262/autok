@@ -17,7 +17,7 @@
             @foreach($entities as $entity)
                 <tr>
                     <td id="{{$entity->id}}">{{$entity->id}}</td>
-                    <td>{{$entity->makerId}}</td>
+                    <td>{{$entity->maker_id}}</td>
                     <td>{{$entity->name}}</td>
                     <!-- <td>
                             <input type="button" class="btn" onclick="editRow()" value="Módosít">

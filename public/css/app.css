@@ -1,9 +1,9 @@
 :root {
-    --clr-bg: #121212;
+    --clr-bg: #320707;
     --clr-text: #e0e0e0;
-    --clr-secondary: #7425d5;
-    --clr-accent: #4e05a9;
-    --clr-bg-light: #1f1f1f;
+    --clr-secondary: #221608;
+    --clr-accent: #a95705;
+    --clr-bg-light: #832b2b;
     --clr-border: #333;
     --clr-highlight: rgb(113, 147, 242);
 }

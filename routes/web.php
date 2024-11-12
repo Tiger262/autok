@@ -5,6 +5,7 @@ use App\Http\Controllers\MakerController;
 use App\Http\Controllers\FuelController;
 use App\Http\Controllers\carModelController;
 use App\Http\Controllers\BodyController;
+use App\Http\Controllers\ColorController;
 
 Route::get('/', function () {
     return view('home');
@@ -37,7 +38,7 @@ Route::patch('fuel/create', [FuelController::class, 'update'])->name('updateFuel
 Route::delete('fuel/{id}', [FuelController::class, 'delete'])->name('deleteFuel');
 Route::post('fuels/search', [FuelController::class, 'search'])->name('searchFuel');
 
-// FUEL
+// BODY
 Route::get('bodies', [BodyController::class, 'index'])->name('bodies');
 Route::post('body', [BodyController::class, 'save'])->name('saveBody');
 Route::get('body/create', [BodyController::class, 'create'])->name('createBody');
@@ -45,3 +46,12 @@ Route::post('body/{id}}', [BodyController::class, 'edit'])->name('editBody');
 Route::patch('body/create', [BodyController::class, 'update'])->name('updateBody');
 Route::delete('body/{id}', [BodyController::class, 'delete'])->name('deleteBody');
 Route::post('bodies/search', [BodyController::class, 'search'])->name('searchBodies');
+
+// BODY
+Route::get('colors', [ColorController::class, 'index'])->name('colors');
+Route::post('color', [ColorController::class, 'save'])->name('saveColor');
+Route::get('color/create', [ColorController::class, 'create'])->name('createColor');
+Route::post('color/{id}}', [ColorController::class, 'edit'])->name('editColor');
+Route::patch('color/create', [ColorController::class, 'update'])->name('updateColor');
+Route::delete('color/{id}', [ColorController::class, 'delete'])->name('deleteColor');
+Route::post('colors/search', [ColorController::class, 'search'])->name('searchColors');
